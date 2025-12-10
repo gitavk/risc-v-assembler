@@ -1,0 +1,8 @@
+services:
+  riscv:
+    image: riscvcourse/workshop_risc-v
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      - .:/code
+    entrypoint: ["/bin/sh"]
+    command: ["-c", "sleep infinity"]
